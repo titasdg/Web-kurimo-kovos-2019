@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>WEB kurimo kovos 2019</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div class="mainDiv">
+
+        <div class="sideMenu">
+            <button type="button" class="btn btn-default">Receptai</button>
+            <button type="button" class="btn btn-default">Kategorijos</button>
+        </div>
+        <div class="mainPage ">
+            <div class="text">
+                <h1>Hello, world!</h1>
+            </div>
+
+
+            <form action="">
+
+                <select class="kategorija">
+           
+          </select>
+                <select>
+            <option value="0">Ingridientai</option>
+            <option value="ingred1">ingred1</option>
+            <option value="ingred2">ingred2</option>
+            
+          </select>
+                <select>
+            <option value="0">Kilme</option>
+            <option value="kilm1">kilm1</option>
+            <option value="kilm2">kilm2</option>
+            <option value="kilm3">kilm3</option>
+          </select>
+                <input type="text" name="search">
+                <button type="button" class="btn btn-default searchbtn">Ieskoti</button>
+            </form>
+
+
+            <div class="data">
+                <div class="random">
+                </div>
+                <div>
+
+                </div>
+                <div class="latest"> 
+                </div>
+                
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://www.themealdb.com/api/json/v1/1/categories.php" type="text" dataType="json"></script>
+    <script src="https://www.themealdb.com/api/json/v1/1/latest.php" type="text" dataType="json"></script>
+</body>
+
+</html>

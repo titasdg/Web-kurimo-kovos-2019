@@ -1,0 +1,46 @@
+var manoAjax = new XMLHttpRequest();
+var startAjax =new XMLHttpRequest();
+const selector = document.querySelector('select');
+const input = document.querySelector('input');
+
+startAjax.onreadystatechange = function(){
+    if (startAjax.readyState === 4)
+    {
+        var maistoMasyvas = JSON.parse(startAjax.responseText);
+        var product = '<div>';
+        for (let i = 0; i < maistoMasyvas.length; i++) {
+
+                product += '<div class="product col-md-3" style="background-image:url(img/' + maistoMasyvas[i].nuotrauka + ');' + '"><h2>' + maistoMasyvas[i].pavadinimas + '</h2>' + '<p>' + maistoMasyvas[i].kaina + '</p></div>';
+            
+        }
+    }
+    product += '</div';
+    document.querySelector('.productDiv').innerHTML = product;
+
+    
+}
+manoAjax.onreadystatechange = function () {
+    if (manoAjax.readyState === 4) {
+        var maistoMasyvas = JSON.parse(manoAjax.responseText);
+        var product = '<div>';
+        for (let i = 0; i < maistoMasyvas.length; i++) {
+            if (selector.value == 'all' && maistoMasyvas[i].pavadinimas.toLowerCase().includes(input.value.toLowerCase())) {
+                product += '<div class="product col-md-3" style="background-image:url(img/' + maistoMasyvas[i].nuotrauka + ');' + '"><h2>' + maistoMasyvas[i].pavadinimas + '</h2>' + '<p>' + maistoMasyvas[i].kaina + '</p></div>';
+            }
+            else if (selector.value == maistoMasyvas[i].kategorija && maistoMasyvas[i].pavadinimas.toLowerCase().includes(input.value.toLowerCase())) {
+                product += '<div class="product col-md-3" style="background-image:url(img/' + maistoMasyvas[i].nuotrauka + ');' + '"><h2>' + maistoMasyvas[i].pavadinimas + '</h2>' + '<p>' + maistoMasyvas[i].kaina + '</p></div>';
+            }
+        }
+    }
+    product += '</div';
+    document.querySelector('.productDiv').innerHTML = product;
+}
+
+startAjax.open('GET', 'duomenys/maistas.json');
+startAjax.send();
+
+
+document.querySelector('button').onclick = function () {
+    manoAjax.open('GET', 'duomenys/maistas.json');
+    manoAjax.send();
+}

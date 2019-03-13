@@ -1,0 +1,141 @@
+$mainYellow:#C7B084;
+$mainBackground:#EEEEEE;
+$borders:#DADADA;
+
+body {
+    width:80%;
+    margin: 0 auto;
+   
+}
+.mainDiv{
+    width: 100%;
+    display: inline-block;
+    
+        .sideMenu{
+            display: inline-block;
+            background-color:black;
+            width: 15%;
+            vertical-align: top;
+           padding-top: 200px;
+           height: 2683px;
+           
+                button{
+                    display: inline-block;
+                    width:100%;
+                    background-color:black;
+                    border:none;
+                  
+                    color:white;
+
+                }
+                button:hover{
+                    border-left: 4px solid $mainYellow;
+                }
+           
+
+        }
+        .mainPage{
+            display: inline-block;
+            background-color:$mainBackground;
+            width: 84%;
+            margin-left:-4px;
+            padding: 15px 15px;
+                .text{
+                    margin: 0 auto;
+                    text-align: center;
+                }
+           form {
+               width: 100%;
+               height: 40px;
+               font-size: 20px;
+               margin-bottom:30px;
+                select{
+                    width:12%;
+                    height: 40px;
+                    background: transparent;
+                    border: 1px solid $borders;
+                    border-radius: 0
+                       
+                }
+                input {
+                    width:40%;
+                    height: 40px;
+                    border: 1px solid $borders;
+                    background: transparent;
+                }
+                button {
+                    margin-left:25px;
+                    background-color:$mainYellow;
+                    border: 1px solid $mainYellow;
+                    border-radius: 0;
+                    color:white;
+                    height: 40px;
+                    width:15%;
+
+
+                }
+           }
+           .data{
+               .random{
+                   .randomRcp{
+                       display: inline-block;
+                        position: relative;
+                        width:48%;
+                        margin:10px;
+                        
+                       img{
+                           width:100%; 
+                       }
+                       h1{
+                           color:white;
+                           width:100%;
+                           text-align: center;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50% , -50%);
+                            -webkit-transform: translate(-50%, -50%);
+                           }
+                   }
+               }
+               .latest{
+                   .recepie{
+                       width:49%;
+                       display: inline-block;
+                       vertical-align: top;
+                       max-height: 245px;
+                       overflow: hidden;
+                       margin-bottom: 10px;
+                       
+                       img{
+                           width:40%;
+                           display: inline-block;
+                           vertical-align: top;
+                       }
+                       .recepieInfo{
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 59%;
+                        margin-right: 0;
+                            h1{
+                                font-size:26px;
+                                margin:0px 5px;
+                               
+                            }
+                            p{
+                                margin:0px 5px;
+                                font-size: 15px;
+                            }
+
+                       }
+                   }
+               }
+           }
+        }
+
+
+
+
+
+
+}
